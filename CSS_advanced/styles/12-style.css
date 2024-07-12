@@ -5,8 +5,8 @@
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
-    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif, 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-base: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-family-title: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
@@ -20,15 +20,12 @@
     --section-header-align: center;
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
-}
+    --section-title-color: var(--color-black);
 
+}
 html {
     scroll-behavior: smooth;
-    font-size: 62.5%;
-}
-
-.visually-hidden {
-    display: none;
+    --font-size: 62,5%;
 }
 
 .section-tagline,
@@ -36,47 +33,45 @@ html {
     color: var(--color-primary);
 }
 
-a {
-    text-decoration: none;
-    background-color: var(--text-color);
-
-
-}
-
-body,
-a {
-    background-color: var(--text-color);
+body {
+    color: var(--text-color);
     font-family: var(--font-family-base);
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-family-title);
-    font-weight: var(--font-weight-bold);
+a{
+    text-decoration: none;
+    color: var(--text-color);
 }
 
-.section-header {
+.visually-hidden{
+    display: none;
+}
+
+.card-category{
+    color: var(--color-primary)
+}
+
+.section-header{
     text-align: var(--section-header-align);
 }
-
-.section-tagline {
-    background-color: var(--color-primary);
-    font-family: var(--font-family-title);
-    text-transform: var(--section-tagline-transform);
-    font-weight: var(--font-weight-bold);
-}
-
-.section-title {
+.section-title{
     font-family: var(--font-family-title);
     font-size: var(--font-size-xx-large);
     font-weight: var(--font-weight-bold);
     margin: var(--section-title-margin);
     color: var(--section-title-color);
+}
+
+.section-tagline{
+    color: var(--color-primary);
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
 }
